@@ -1,0 +1,8 @@
+CREATE DATABASE db;
+use db;
+
+CREATE TABLE `number` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '',
+  `random_number` INT NULL COMMENT '',
+  PRIMARY KEY (`id`)  COMMENT '')
+  ENGINE=InnoDB AUTO_INCREMENT=4306 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
