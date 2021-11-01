@@ -5,7 +5,7 @@ services:
     links:
       - db
     ports:
-      - "5000:5000"
+      - "5000:5000" 
 
   db:
     image: mysql:8.0.21
@@ -13,8 +13,8 @@ services:
     ports:
       - "3307:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root #this variable is not in use
     volumes:
       - ./sql:/docker-entrypoint-initdb.d/:ro
 volumes:
-    sql:
+    sql: # what is the volume size? 
