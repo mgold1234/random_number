@@ -26,6 +26,6 @@ RUN apk add --update \
   tcl-dev \
   tiff-dev \
   tk-dev \
-  zlib-dev
+  zlib-dev. # why do you need all those libs? they are not in use 
 RUN pip install -r requirements.txt
 CMD python /app/app.py
