@@ -9,7 +9,7 @@ mysql = MySQL()
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'root'
 app.config['MYSQL_DATABASE_DB'] = 'random_values'
-app.config['MYSQL_DATABASE_HOST'] = 'db'
+app.config['MYSQL_DATABASE_HOST'] = 'db'  # transfrom it to Env variables  
 mysql.init_app(app)
 
 
@@ -27,9 +27,9 @@ def numbers():
     rows = cursor.fetchall()
 
     resp = jsonify(rows)
-    resp.status_code = 200
+    resp.status_code = 200  # what happanes if DB fails  need to manage failure and send back errors.
 
-    return resp
+    return resp # return also a body with the randon number generated 
 
 
 if __name__ == "__main__":
